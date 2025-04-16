@@ -5,4 +5,4 @@ paddleocr
 paddlepaddle
 Torch==2.2.2
 setuptools
-opencv-python-headless
+libgl1
