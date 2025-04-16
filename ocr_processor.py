@@ -1,12 +1,17 @@
-import numpy as np
-from paddleocr import PaddleOCR
+from rapidocr import RapidOCR
 from PIL import Image
+import numpy as np
 
 class OCRProcessor:
     def __init__(self):
-        self.ocr = PaddleOCR(use_angle_cls=False, lang='en', det_model_dir='models/det', rec_model_dir='models/rec', use_gpu=False)
+        self.ocr = RapidOCR()
 
     def extract_text(self, image: Image.Image) -> str:
-        result = self.ocr.ocr(np.array(image))
-        full_text = "\n".join([line[1][0] for line in result[0]])
+        # Convert PIL image to NumPy array and then to BGR (RapidOCR expects BGR format)
+        image = np.array(image)
+        if image.shape[-1] == 4:
+            image = image[:, :, :3]  # Drop alpha if exists
+
+        result = self.ocr(image)
+        full_text = "\n".join([line for line in result.txts])
         return full_text
