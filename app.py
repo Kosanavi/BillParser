@@ -13,7 +13,9 @@ from paddleocr import PaddleOCR
 
 
 ocr = PaddleOCR(use_angle_cls=False, lang='en', det_model_dir='models/det', rec_model_dir='models/rec', use_gpu=False)
-os.environ['GROQ_API_KEY'] = GROQ_API_KEY
+# Access the key from Streamlit's secrets
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 invoice_prompt_template = PromptTemplate(
     input_variables=["invoice_text"],
