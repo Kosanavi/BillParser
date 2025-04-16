@@ -3,7 +3,6 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 import streamlit as st
 from PIL import Image
-import pytesseract
 import os
 import json
 from langchain_core.prompts import PromptTemplate
