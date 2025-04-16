@@ -5,4 +5,3 @@ paddleocr
 paddlepaddle
 Torch==2.2.2
 setuptools
-libgl1
