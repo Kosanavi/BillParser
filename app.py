@@ -6,7 +6,9 @@ import streamlit.components.v1 as components
 
 
 # Load API key securely
-GROQ_API_KEY ="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"
+# Access the key from Streamlit's secrets
+GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+os.environ["GROQ_API_KEY"] = GROQ_API_KEY
 
 # Initialize classes
 ocr_processor = OCRProcessor()
