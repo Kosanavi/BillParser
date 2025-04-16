@@ -7,3 +7,4 @@ Torch==2.2.2
 setuptools
 onnxruntime
 rapidocr
+opencv-python-headless
