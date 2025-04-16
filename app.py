@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import os
 from ocr_processor import OCRProcessor
 from invoice_parser import InvoiceParser
 import streamlit.components.v1 as components
