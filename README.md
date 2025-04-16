@@ -1,5 +1,9 @@
 # Project Title: Bill Image Parser Using Generative AI
 
+# Hosted at 
+
+https://billparser-assessment.streamlit.app/
+
 # Overview:
 
 This project is focused on automating the extraction of structured data from images of bills or invoices using Generative AI. The core idea is to take a picture or scanned image of a bill and use a combination of OCR and a generative language model to convert the unstructured text into a clean, structured JSON format that can be used for the analytics.
