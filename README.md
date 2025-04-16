@@ -11,7 +11,7 @@ Python, Streamlit for UI
 
 PaddleOCR / RapidOCR for text extraction
 
-LangChain + LLMs + GroQ for text parsing
+LangChain + LLMs + ChatGroQ for text parsing
 
 PIL, NumPy, and standard Python libraries for image and text processing
 
@@ -22,7 +22,7 @@ PIL, NumPy, and standard Python libraries for image and text processing
 
 ├── ocr_processor.py      # OCR logic class (RapidOCR)
 
-├── invoice_parser.py     # GROQ-LLM-based invoice parsing class
+├── invoice_parser.py     # LLM-based invoice parsing class
 
 ├── requirements.txt      # Python dependencies
 
