@@ -75,9 +75,6 @@ import numpy as np
 model="llama-3.3-70b-versatile"
 llm = ChatGroq(model=model)
 
-
-# 3. Create the chain
-from langchain.chains import LLMChain
 chain = RunnableSequence(invoice_prompt_template | llm)
 
 # Streamlit app
