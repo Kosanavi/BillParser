@@ -34,7 +34,7 @@ if "last_uploaded_file" not in st.session_state:
 uploaded_file = st.file_uploader("Upload a bill image", type=["jpg", "jpeg", "png"])
 if uploaded_file and not st.session_state.ocr_text:
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Bill", use_column_width=False)
+    st.image(image, caption="Uploaded Bill", use_container_width =False)
     with st.spinner("Extracting text with OCR..."):
         st.session_state.ocr_text = ocr_processor.extract_text(image)
 
