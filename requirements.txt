@@ -1,0 +1,6 @@
+streamlit
+langchain_core
+langchain_groq
+paddleocr 
+paddlepaddle
+Torch==2.2.2
