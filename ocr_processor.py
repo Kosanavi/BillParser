@@ -1,7 +1,6 @@
 from rapidocr import RapidOCR
 from PIL import Image
 import numpy as np
-from PIL import ImageFilter
 
 class OCRProcessor:
     def __init__(self):
