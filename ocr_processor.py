@@ -17,7 +17,7 @@ class OCRProcessor:
         image = image.point(lambda p: 255 if p > threshold else 0)
         # Resize
         new_size = (int(image.width * 2), int(image.height * 2))
-        return image.resize(new_size, Image.LANCZOS)
+        return image.resize(new_size, Image.Resampling.LANCZOS)
 
     def extract_text(self, image: Image.Image) -> str:
         preprocessed_image = self.preprocess_image(image)  # Preprocess the image
